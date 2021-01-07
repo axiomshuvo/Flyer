@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Project</title>
-    <style type="text/css" src="style.css" ></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrap">
@@ -15,11 +15,39 @@
                     <input name="imgfinder" type="file" accept="image/*">
                 </form>
             </div>
-            <div class="img-view">
-                <img src="" alt="">
+            <div class="flyerview">
+                <img src="media/1l877g.jpg" alt="">
+                <span class="flyertext">La La La</span>
             </div>
         </div>
         <div class="right">
+            <div class="flyername">
+                <form action="">
+                    <input type="text" name="flyertext" class="flyertext" >
+                </form>
+            </div>
+            <div class="flyerstyle">
+                <h4>Style</h4>
+                <ul>
+                    <li id="default" >default</li>
+                    <li id="fanwood" >fanwood</li>
+                    <li id="hanalei" >hanalei</li>
+                    <li id="pirate" >pirate</li>
+                    <li id="cormorant" >cormorant</li>
+                    <li id="playball" >playball</li>
+                </ul>
+            </div>
+            <div class="flyeranimation">
+                <h4>Animation</h4>
+                <ul>
+                    <li id="none" >None</li>
+                    <li id="pulse" >Pulse</li>
+                    <li id="heartbeat" >heartbeat</li>
+                    <li id="bounce" >bounce</li>
+                    <li id="rotate" >rotate</li>
+                    <li id="shake" >shake</li>
+                </ul>
+            </div>
 
         </div>
     </div>
