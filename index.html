@@ -11,13 +11,17 @@
 
         <div class="left">
             <div class="imgfinder-area">
-                <form  name="" action="">
                     <label for="imgfinder">Choose an image:</label>
-                    <input name="imgfinder" type="file" accept="image/*">
-                </form>
+                    <input 
+                        id="imgfinder"
+                        name="imgfinder" 
+                        type="file" 
+                        accept="image/*" 
+                        onchange="readURL(this);"
+                    >
             </div>
             <div class="flyerview">
-                <img src="media/1l877g.jpg" alt="">
+                <img id="flyerimg" src="media/1l877g.jpg" alt="">
                 <div class="textplace">
                     <span class="flyertext">Have you got any money bro??</span>
                 </div>

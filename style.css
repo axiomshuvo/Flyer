@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Fanwood+Text&family=Hanalei+Fill&family=Mouse+Memoirs&family=Pirata+One&family=Playball&display=swap");
+:root {
+  --bk:#000000;
+  --wt:#ffffff; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -8,7 +12,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
-  background-color: #000;
+  background-color: var(--bk);
   font-family: 'Cormorant Infant', serif; }
 
 .mouse {
@@ -65,7 +69,8 @@ body {
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        text-shadow: 1px 1px var(--bk); }
 
 .right {
   background-color: #333;
