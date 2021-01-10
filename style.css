@@ -1,7 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Fanwood+Text&family=Hanalei+Fill&family=Mouse+Memoirs&family=Pirata+One&family=Playball&display=swap");
+@-webkit-keyframes pulsate {
+  from {
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 1; }
+  to {
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    opacity: 0; } }
+@-moz-keyframes pulsate {
+  from {
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 1; }
+  to {
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    opacity: 0; } }
+@-o-keyframes pulsate {
+  from {
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 1; }
+  to {
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    opacity: 0; } }
+@keyframes pulsate {
+  from {
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 1; }
+  to {
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    opacity: 0; } }
+.pulsate {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: pulsate;
+  -moz-animation-name: pulsate;
+  -o-animation-name: pulsate;
+  animation-name: pulsate;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  animation-direction: normal; }
+
 :root {
-  --bk:#000000;
-  --wt:#ffffff; }
+  --bk: #000000;
+  --wt: #ffffff; }
 
 * {
   margin: 0;
@@ -13,22 +75,26 @@ body {
   line-height: 1.5;
   color: #ffffff;
   background-color: var(--bk);
-  font-family: 'Cormorant Infant', serif; }
+  font-family: "Cormorant Infant", serif; }
 
 .mouse {
-  font-family: 'Mouse Memoirs', sans-serif; }
+  font-family: "Mouse Memoirs", sans-serif; }
 
 .fanwood {
-  font-family: 'Fanwood Text', serif; }
+  font-family: "Fanwood Text", serif; }
 
 .hanalei {
-  font-family: 'Hanalei Fill', cursive; }
+  font-family: "Hanalei Fill", cursive; }
 
 .pirate {
-  font-family: 'Pirata One', cursive; }
+  font-family: "Pirata One", cursive; }
 
 .playball {
-  font-family: 'Playball', cursive; }
+  font-family: "Playball", cursive; }
+
+.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
 
 .wrap {
   display: grid;
@@ -62,7 +128,7 @@ body {
       -moz-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       overflow: hidden; }
-      .left .flyerview .textplace .flyertext {
+      .left .flyerview .textplace #flyertext {
         width: 100%;
         height: 100%;
         font-size: 2.5rem;
