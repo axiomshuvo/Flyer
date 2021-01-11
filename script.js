@@ -4,6 +4,8 @@ $(document).ready(function () {
   const fileInput = ("#imgfinder");
   const flyerimg = ("#flyerimg");
   let flyertext = ('#flyertext');
+  const styleName = ["fanwood","hanalei","pirate","mouse","playball"];
+  let animationName= ["none","bounce", "pulsate","pulse","heartbeat","flip","shake"];
 
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -26,17 +28,32 @@ $(document).ready(function () {
       console.log(inputVal);
     })
 
-  // ["bounce", "pulsate","pulse","heartbeat","rotate","shake"]
+    // Style Change
+    $('.flyerstyle li').click(
+      function (e) {
+        var style = $(this).attr('class');
+        if(style == 'default'){
+          $(flyertext).removeClass(styleName);
+        }else{
+          $(flyertext).removeClass(styleName);
+          setTimeout(function() { 
+            $(flyertext).addClass(style);
+            }, 001);
+        }
+      });
+
+    // Animation Changes
   $('.flyeranimation li').click(
     function (e) {
-      var id = $(this).attr('id');
-      if(id == 'none'){
-        $(flyertext).removeClass(["none","bounce", "pulsate","pulse","heartbeat","rotate","shake"]);
+      var anim = $(this).attr('id');
+      if(anim == 'none'){
+        $(flyertext).removeClass(animationName);
       }else{
-        $(flyertext).removeClass(["bounce", "pulsate","pulse","heartbeat","rotate","shake"])
-                    .addClass(id);
+        $(flyertext).removeClass(animationName);
+        setTimeout(function() { 
+          $(flyertext).addClass(anim);
+          }, 001);
       }
-
     });
 
 

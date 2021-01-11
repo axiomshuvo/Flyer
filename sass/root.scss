@@ -1,0 +1,21 @@
+:root {
+    --bk: #000000;
+    --wt: #ffffff;
+    --grey:#333333;
+    --bgstyle:#0a0c0c;
+    --brcolor:#07d4d4;
+    --txshd:#521212;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: var(--bk);
+    font-family: 'Bodoni Moda', serif;
+}

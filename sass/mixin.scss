@@ -1,0 +1,113 @@
+// MIXIN
+@mixin animate($name, $duration, $delay, $iteration, $direction) {
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
+
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+
+    -o-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+
+    -webkit-animation-iteration-count: $iteration;
+    -moz-animation-iteration-count: $iteration;
+    -o-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    animation-direction: $direction;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin transform-origin($pro) {
+    transform-origin: $pro;
+    -moz-transform-origin: $pro;
+    -webkit-transform-origin: $pro;
+    -o-transform-origin: $pro;
+    -ms-transform-origin: $pro;
+}
+
+@mixin translate($X, $Y) {
+    -webkit-transform: translate($X, $Y);
+    -ms-transform: translate($X, $Y);
+    -o-transform: translate($X, $Y);
+    -moz-transform: translate($X, $Y);
+    transform: translate($X, $Y);
+}
+@mixin rotate($X, $Y) {
+    -webkit-transform: rotate($X, $Y);
+    -ms-transform: rotate($X, $Y);
+    -o-transform: rotate($X, $Y);
+    -moz-transform: rotate($X, $Y);
+    transform: rotate($X, $Y);
+}
+@mixin rotate3d($X, $Y, $z, $angle) {
+    -webkit-transform: rotate3d($X, $Y, $z, $angle);
+    -ms-transform: rotate3d($X, $Y, $z, $angle);
+    -o-transform: rotate3d($X, $Y, $z, $angle);
+    -moz-transform: rotate3d($X, $Y, $z, $angle);
+    transform: rotate3d($X, $Y, $z, $angle);
+}
+
+@mixin  perspective($x) {
+    -webkit-transform: perspective($x);
+    -ms-transform: perspective($x);
+    -o-transform: perspective($x);
+    -moz-transform: perspective($x);
+    transform: perspective($x);
+}
+
+@mixin tr3d($a, $b, $c) {
+    transform: translate3d($a, $b, $c);
+    -webkit-transform: translate3d($a, $b, $c);
+    -moz-transform: translate3d($a, $b, $c);
+    -o-transform: translate3d($a, $b, $c);
+}
+@mixin scale($a, $b) {
+    transform: scale($a, $b);
+    -webkit-transform: scale($a, $b);
+    -moz-transform: scale($a, $b);
+    -o-transform: scale($a, $b);
+}
+@mixin scale3d($a, $b, $c) {
+    transform: scale3d($a, $b, $c);
+    -webkit-transform: scale3d($a, $b, $c);
+    -moz-transform: scale3d($a, $b, $c);
+    -o-transform: scale3d($a, $b, $c);
+}
+
+
+@mixin atf($pro) {
+    animation-timing-function: cubic-bezier($pro);
+    -webkit-animation-timing-function: cubic-bezier($pro);
+    -moz-animation-timing-function: cubic-bezier($pro);
+    -o-animation-timing-function: cubic-bezier($pro);
+}
+@mixin atf-cb($a, $b, $c, $d) {
+    animation-timing-function: cubic-bezier($a, $b, $c, $d);
+    -webkit-animation-timing-function: cubic-bezier($a, $b, $c, $d);
+    -moz-animation-timing-function: cubic-bezier($a, $b, $c, $d);
+    -o-animation-timing-function: cubic-bezier($a, $b, $c, $d);
+}

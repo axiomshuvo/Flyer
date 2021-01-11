@@ -1,0 +1,117 @@
+// ################# Font style ##################
+
+// .cormorant{
+//     font-family: 'Cormorant Infant', serif;
+// }
+.mouse {
+    font-family: "Mouse Memoirs", sans-serif;
+}
+
+.fanwood {
+    font-family: "Fanwood Text", serif;
+}
+.hanalei {
+    font-family: "Hanalei Fill", cursive;
+}
+.pirate {
+    font-family: "Pirata One", cursive;
+}
+.playball {
+    font-family: "Playball", cursive;
+}
+
+// ###############  Body Style ########################
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.left {
+    padding: 30px;
+    .imgfinder-area {
+        margin-bottom: 15px;
+        label {
+            margin-right: 10px;
+        }
+        input {
+            color: transparent;
+        }
+    }
+    .flyerview {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .textplace {
+            position: absolute;
+            width: 70%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+            // overflow: hidden;
+            #flyertext {
+                width: 100%;
+                height: 100%;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-shadow: 1px 1px var(--txshd);
+            }
+        }
+    }
+}
+
+.right {
+    background-color: var(--grey);
+    padding: 30px;
+    .flyername {
+        margin-bottom: 30px;
+        .flyerinput {
+            width: 100%;
+            min-height: 45px;
+            font-size: 2.5rem;
+        }
+    }
+    .flyerstyle {
+        margin-bottom: 30px;
+        h4 {
+            text-transform: capitalize;
+            text-indent: 1px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            li {
+                text-transform: uppercase;
+                padding: 10px;
+                display: inline;
+                text-align: center;
+                background: var(--bgstyle);
+                cursor: pointer;
+                border: 1px solid var(--bgstyle);
+                &:hover,
+                &:focus {
+                    border-color:var(--brcolor);
+                }
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .flyeranimation {
+        @extend .flyerstyle;
+    }
+}
